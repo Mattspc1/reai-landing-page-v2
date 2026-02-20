@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>72-Hour Appointment Rescue System | Stop Losing Paid Leads</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Arial', sans-serif; background: #0a0a0a; color: #fff; line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+    
+    /* Hero Section */
+    .hero { text-align: center; padding: 60px 20px; }
+    .hero h1 { font-size: 2.8rem; font-weight: 900; line-height: 1.2; margin-bottom: 20px; }
+    .hero h1 span { color: #ff4d4d; }
+    .hero .subhead { font-size: 1.4rem; color: #ccc; margin-bottom: 30px; }
+    .hero .guarantee-badge { background: #ff4d4d; color: #fff; padding: 10px 20px; border-radius: 5px; font-weight: bold; display: inline-block; margin-bottom: 30px; }
+    
+    /* CTA Button */
+    .cta-btn { background: #00c853; color: #fff; font-size: 1.3rem; font-weight: bold; padding: 20px 40px; border: none; border-radius: 8px; cursor: pointer; text-decoration: none; display: inline-block; transition: transform 0.2s; }
+    .cta-btn:hover { transform: scale(1.05); background: #00e676; }
+    .cta-note { font-size: 0.9rem; color: #888; margin-top: 10px; }
+    
+    /* Problem Section */
+    .problem { background: #111; padding: 60px 20px; }
+    .problem h2 { font-size: 2rem; text-align: center; margin-bottom: 30px; }
+    .problem h2 span { color: #ff4d4d; }
+    .problem-list { max-width: 600px; margin: 0 auto; }
+    .problem-list li { font-size: 1.2rem; margin-bottom: 15px; padding-left: 30px; position: relative; }
+    .problem-list li::before { content: "❌"; position: absolute; left: 0; }
+    
+    /* Solution Section */
+    .solution { padding: 60px 20px; text-align: center; }
+    .solution h2 { font-size: 2rem; margin-bottom: 20px; }
+    .solution h2 span { color: #00c853; }
+    .solution p { font-size: 1.2rem; color: #ccc; max-width: 600px; margin: 0 auto 30px; }
+    
+    /* What You Get */
+    .deliverables { background: #111; padding: 60px 20px; }
+    .deliverables h2 { font-size: 2rem; text-align: center; margin-bottom: 40px; }
+    .deliverables-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 700px; margin: 0 auto; }
+    .deliverable-item { background: #1a1a1a; padding: 25px; border-radius: 10px; border-left: 4px solid #00c853; }
+    .deliverable-item h3 { font-size: 1.1rem; margin-bottom: 10px; color: #00c853; }
+    .deliverable-item p { font-size: 1rem; color: #aaa; }
+    
+    /* Guarantee Section */
+    .guarantee { padding: 60px 20px; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); }
+    .guarantee h2 { font-size: 2rem; margin-bottom: 20px; }
+    .guarantee-box { background: #00c853; color: #000; padding: 30px; border-radius: 10px; max-width: 600px; margin: 0 auto; }
+    .guarantee-box h3 { font-size: 1.5rem; font-weight: 900; margin-bottom: 10px; }
+    .guarantee-box p { font-size: 1.1rem; }
+    
+    /* Pricing Section */
+    .pricing { padding: 60px 20px; text-align: center; }
+    .pricing h2 { font-size: 2rem; margin-bottom: 20px; }
+    .price-tag { font-size: 4rem; font-weight: 900; color: #00c853; }
+    .price-note { font-size: 1.2rem; color: #888; margin-bottom: 30px; }
+    .slots { font-size: 1.3rem; color: #ff4d4d; font-weight: bold; margin-bottom: 30px; }
+    
+    /* FAQ Section */
+    .faq { background: #111; padding: 60px 20px; }
+    .faq h2 { font-size: 2rem; text-align: center; margin-bottom: 40px; }
+    .faq-item { max-width: 600px; margin: 0 auto 20px; padding: 20px; background: #1a1a1a; border-radius: 8px; }
+    .faq-item h3 { font-size: 1.1rem; margin-bottom: 10px; color: #fff; }
+    .faq-item p { font-size: 1rem; color: #aaa; }
+    
+    /* Final CTA */
+    .final-cta { padding: 80px 20px; text-align: center; background: linear-gradient(180deg, #0a0a0a 0%, #111 100%); }
+    .final-cta h2 { font-size: 2.2rem; margin-bottom: 20px; }
+    .final-cta p { font-size: 1.2rem; color: #ccc; margin-bottom: 30px; }
+    
+    /* Footer */
+    .footer { padding: 30px 20px; text-align: center; color: #555; font-size: 0.9rem; }
+    
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      .price-tag { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="guarantee-badge">🔒 LIVE IN 72 HOURS OR YOU DON'T PAY</div>
+      <h1>Stop <span>Bleeding Money</span> From Missed Calls & Slow Follow-Up</h1>
+      <p class="subhead">We install a complete lead-capture + follow-up + booking system in 72 hours flat. You stop losing deals to competitors who called back first.</p>
+      <a href="#book" class="cta-btn">CLAIM YOUR SLOT →</a>
+      <p class="cta-note">Only 2 spots available this week</p>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem">
+    <div class="container">
+      <h2>Here's The <span>Brutal Truth</span> About Your Lead Flow</h2>
+      <ul class="problem-list">
+        <li>You're paying for leads that go cold because no one called back fast enough</li>
+        <li>Missed calls turn into missed deals — and you don't even know it's happening</li>
+        <li>Your "follow-up system" is really just hoping someone remembers to text</li>
+        <li>Competitors with faster response times are eating your lunch</li>
+        <li>Every day without a system is money walking out the door</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="solution">
+    <div class="container">
+      <h2>Introducing The <span>72-Hour Appointment Rescue System</span></h2>
+      <p>A done-for-you lead response machine that captures missed calls, follows up automatically, and books appointments to your calendar — installed and tested in 72 hours or you don't pay a dime.</p>
+    </div>
+  </section>
+
+  <!-- DELIVERABLES -->
+  <section class="deliverables">
+    <div class="container">
+      <h2>What You Get (Installed In 72 Hours)</h2>
+      <div class="deliverables-grid">
+        <div class="deliverable-item">
+          <h3>📱 Missed-Call Text-Back</h3>
+          <p>Every missed call gets an instant text. No more "I called but no one answered" excuses from leads.</p>
+        </div>
+        <div class="deliverable-item">
+          <h3>💬 2-Way SMS Follow-Up Sequences</h3>
+          <p>Automated sequences that feel personal. Leads get nurtured until they book — or tell you to stop.</p>
+        </div>
+        <div class="deliverable-item">
+          <h3>📧 Email Follow-Up Sequences</h3>
+          <p>Multi-touch email sequences that work alongside SMS. More touches = more bookings.</p>
+        </div>
+        <div class="deliverable-item">
+          <h3>🗓️ Calendar Booking Integration</h3>
+          <p>Leads book directly to your calendar. No back-and-forth, no friction, no dropped balls.</p>
+        </div>
+        <div class="deliverable-item">
+          <h3>🔔 Instant Lead Notifications</h3>
+          <p>Get notified the second a new lead comes in. Route to the right person automatically.</p>
+        </div>
+        <div class="deliverable-item">
+          <h3>📊 Daily Pipeline Report</h3>
+          <p>Know exactly what's happening every day. Leads in, conversations started, appointments booked.</p>
+        </div>
+        <div class="deliverable-item">
+          <h3>✅ Live Test Call + Booking</h3>
+          <p>We don't just build it — we test it live with you before handoff. Proof it works.</p>
+        </div>
+        <div class="deliverable-item">
+          <h3>🛠️ 7 Days of Tweaks</h3>
+          <p>Post-launch support to dial in sequences, timing, and edge cases. We make sure it sticks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section class="guarantee">
+    <div class="container">
+      <h2>The "No Excuses" Guarantee</h2>
+      <div class="guarantee-box">
+        <h3>LIVE & TESTED IN 72 HOURS — OR YOU DON'T PAY</h3>
+        <p>We start the clock when you pay. If your system isn't live and tested within 72 hours, you get a full refund. No questions, no hassle. We're not here to waste your time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="book">
+    <div class="container">
+      <h2>Your Investment</h2>
+      <div class="price-tag">$5,000</div>
+      <p class="price-note">One-time setup fee. Paid upfront to start the 72-hour clock.</p>
+      <p class="slots">⚡ Only 2 Slots Available This Week ⚡</p>
+      <a href="https://calendly.com/YOUR-LINK" class="cta-btn">BOOK YOUR DEMO CALL →</a>
+      <p class="cta-note">15-minute call to see if this is right for you</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <h2>Common Questions</h2>
+      
+      <div class="faq-item">
+        <h3>"We already have a CRM / follow-up system."</h3>
+        <p>Great — then this is even easier. We plug into what you have. But if your current setup was working, your calendar would be full. Is it?</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>"Will this guarantee appointments?"</h3>
+        <p>We guarantee installation + testing in 72 hours. Outcomes depend on your lead volume and offer quality — but we guarantee you'll stop bleeding leads from missed follow-up.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>"What if it doesn't work for my business?"</h3>
+        <p>That's what the demo call is for. We'll tell you straight up if this isn't a fit. No hard sell, no BS.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>"Why $5,000?"</h3>
+        <p>Because cheap solutions get ignored. This is a serious system for serious teams who are already spending money on leads. If you're wasting even 20% of your leads to slow follow-up, you're losing way more than $5K/month.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>"What do I need to get started?"</h3>
+        <p>A phone number, access to your lead sources, and your calendar. We handle everything else.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Every Day You Wait Is Another Deal Lost</h2>
+      <p>Your competitors aren't waiting. They're calling back in 60 seconds while your leads sit unanswered. Fix it now.</p>
+      <a href="https://calendly.com/YOUR-LINK" class="cta-btn">CLAIM YOUR SLOT →</a>
+      <p class="cta-note">2 spots left this week. Once they're gone, they're gone.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2024 AZ Konnect. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
