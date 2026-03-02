@@ -3,82 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>72-Hour Appointment Rescue System | Stop Losing Paid Leads</title>
+  <title>72-Hour Appointment Rescue System | AZ Konnect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Arial', sans-serif; background: #0a0a0a; color: #fff; line-height: 1.6; }
+    body { font-family: 'Inter', sans-serif; background: #1F1346; color: #fff; line-height: 1.6; }
     .container { max-width: 800px; margin: 0 auto; padding: 20px; }
     
+    /* Header */
+    .header { padding: 20px; text-align: center; background: #2f1c6a; }
+    .logo { max-width: 180px; height: auto; }
+    
     /* Hero Section */
-    .hero { text-align: center; padding: 60px 20px; }
+    .hero { text-align: center; padding: 60px 20px; background: linear-gradient(180deg, #2f1c6a 0%, #1F1346 100%); }
     .hero h1 { font-size: 2.8rem; font-weight: 900; line-height: 1.2; margin-bottom: 20px; }
-    .hero h1 span { color: #ff4d4d; }
-    .hero .subhead { font-size: 1.4rem; color: #ccc; margin-bottom: 30px; }
-    .hero .guarantee-badge { background: #ff4d4d; color: #fff; padding: 10px 20px; border-radius: 5px; font-weight: bold; display: inline-block; margin-bottom: 30px; }
+    .hero h1 span { color: #8c85ff; }
+    .hero .subhead { font-size: 1.4rem; color: #d5dfff; margin-bottom: 30px; }
+    .hero .guarantee-badge { background: #673de6; color: #fff; padding: 12px 24px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 30px; border: 2px solid #8c85ff; }
     
     /* CTA Button */
-    .cta-btn { background: #00c853; color: #fff; font-size: 1.3rem; font-weight: bold; padding: 20px 40px; border: none; border-radius: 8px; cursor: pointer; text-decoration: none; display: inline-block; transition: transform 0.2s; }
-    .cta-btn:hover { transform: scale(1.05); background: #00e676; }
-    .cta-note { font-size: 0.9rem; color: #888; margin-top: 10px; }
+    .cta-btn { background: #00b090; color: #fff; font-size: 1.3rem; font-weight: 700; padding: 20px 40px; border: none; border-radius: 8px; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.2s; box-shadow: 0 4px 20px rgba(0, 176, 144, 0.4); }
+    .cta-btn:hover { transform: scale(1.05); background: #00c9a7; box-shadow: 0 6px 25px rgba(0, 176, 144, 0.5); }
+    .cta-note { font-size: 0.9rem; color: #8c85ff; margin-top: 15px; }
+    
+    /* New REAI CTA Button */
+    .reai-cta-btn {
+      display: inline-block;
+      padding: 16px 36px;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      border-radius: 14px;
+      background: linear-gradient(90deg, #66AFE2, #057ED6);
+      color: #0B1424; /* Dark navy text for visibility */
+      box-shadow: 0 15px 40px rgba(5,126,214,.35);
+      transition: all .25s ease;
+    }
+    .reai-cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 50px rgba(5,126,214,.45);
+    }
+    .reai-cta-btn:active {
+      transform: translateY(0px);
+    }
     
     /* Problem Section */
-    .problem { background: #111; padding: 60px 20px; }
+    .problem { background: #2f1c6a; padding: 60px 20px; }
     .problem h2 { font-size: 2rem; text-align: center; margin-bottom: 30px; }
-    .problem h2 span { color: #ff4d4d; }
-    .problem-list { max-width: 600px; margin: 0 auto; }
-    .problem-list li { font-size: 1.2rem; margin-bottom: 15px; padding-left: 30px; position: relative; }
+    .problem h2 span { color: #fc5185; }
+    .problem-list { max-width: 600px; margin: 0 auto; list-style: none; }
+    .problem-list li { font-size: 1.2rem; margin-bottom: 15px; padding-left: 35px; position: relative; color: #d5dfff; }
     .problem-list li::before { content: "❌"; position: absolute; left: 0; }
     
     /* Solution Section */
-    .solution { padding: 60px 20px; text-align: center; }
+    .solution { padding: 60px 20px; text-align: center; background: #1F1346; }
     .solution h2 { font-size: 2rem; margin-bottom: 20px; }
-    .solution h2 span { color: #00c853; }
-    .solution p { font-size: 1.2rem; color: #ccc; max-width: 600px; margin: 0 auto 30px; }
+    .solution h2 span { color: #00b090; }
+    .solution p { font-size: 1.2rem; color: #d5dfff; max-width: 600px; margin: 0 auto 30px; }
     
     /* What You Get */
-    .deliverables { background: #111; padding: 60px 20px; }
+    .deliverables { background: #2f1c6a; padding: 60px 20px; }
     .deliverables h2 { font-size: 2rem; text-align: center; margin-bottom: 40px; }
     .deliverables-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 700px; margin: 0 auto; }
-    .deliverable-item { background: #1a1a1a; padding: 25px; border-radius: 10px; border-left: 4px solid #00c853; }
-    .deliverable-item h3 { font-size: 1.1rem; margin-bottom: 10px; color: #00c853; }
-    .deliverable-item p { font-size: 1rem; color: #aaa; }
+    .deliverable-item { background: #1F1346; padding: 25px; border-radius: 12px; border-left: 4px solid #673de6; transition: transform 0.2s; }
+    .deliverable-item:hover { transform: translateY(-3px); }
+    .deliverable-item h3 { font-size: 1.1rem; margin-bottom: 10px; color: #8c85ff; }
+    .deliverable-item p { font-size: 1rem; color: #d5dfff; }
     
     /* Guarantee Section */
-    .guarantee { padding: 60px 20px; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); }
+    .guarantee { padding: 60px 20px; text-align: center; background: #1F1346; }
     .guarantee h2 { font-size: 2rem; margin-bottom: 20px; }
-    .guarantee-box { background: #00c853; color: #000; padding: 30px; border-radius: 10px; max-width: 600px; margin: 0 auto; }
-    .guarantee-box h3 { font-size: 1.5rem; font-weight: 900; margin-bottom: 10px; }
-    .guarantee-box p { font-size: 1.1rem; }
+    .guarantee-box { background: linear-gradient(135deg, #673de6 0%, #5025d1 100%); color: #fff; padding: 35px; border-radius: 16px; max-width: 600px; margin: 0 auto; box-shadow: 0 10px 40px rgba(103, 61, 230, 0.3); }
+    .guarantee-box h3 { font-size: 1.5rem; font-weight: 900; margin-bottom: 15px; }
+    .guarantee-box p { font-size: 1.1rem; color: #d5dfff; }
     
     /* Pricing Section */
-    .pricing { padding: 60px 20px; text-align: center; }
+    .pricing { padding: 60px 20px; text-align: center; background: #2f1c6a; }
     .pricing h2 { font-size: 2rem; margin-bottom: 20px; }
-    .price-tag { font-size: 4rem; font-weight: 900; color: #00c853; }
-    .price-note { font-size: 1.2rem; color: #888; margin-bottom: 30px; }
-    .slots { font-size: 1.3rem; color: #ff4d4d; font-weight: bold; margin-bottom: 30px; }
+    .price-tag { font-size: 4.5rem; font-weight: 900; color: #00b090; text-shadow: 0 0 30px rgba(0, 176, 144, 0.4); }
+    .price-note { font-size: 1.2rem; color: #d5dfff; margin-bottom: 30px; }
+    .slots { font-size: 1.3rem; color: #fc5185; font-weight: 700; margin-bottom: 30px; padding: 15px; background: rgba(252, 81, 133, 0.1); border-radius: 8px; display: inline-block; }
     
     /* FAQ Section */
-    .faq { background: #111; padding: 60px 20px; }
+    .faq { background: #1F1346; padding: 60px 20px; }
     .faq h2 { font-size: 2rem; text-align: center; margin-bottom: 40px; }
-    .faq-item { max-width: 600px; margin: 0 auto 20px; padding: 20px; background: #1a1a1a; border-radius: 8px; }
+    .faq-item { max-width: 600px; margin: 0 auto 20px; padding: 25px; background: #2f1c6a; border-radius: 12px; border: 1px solid #673de6; }
     .faq-item h3 { font-size: 1.1rem; margin-bottom: 10px; color: #fff; }
-    .faq-item p { font-size: 1rem; color: #aaa; }
+    .faq-item p { font-size: 1rem; color: #d5dfff; }
     
     /* Final CTA */
-    .final-cta { padding: 80px 20px; text-align: center; background: linear-gradient(180deg, #0a0a0a 0%, #111 100%); }
+    .final-cta { padding: 80px 20px; text-align: center; background: linear-gradient(180deg, #1F1346 0%, #2f1c6a 100%); }
     .final-cta h2 { font-size: 2.2rem; margin-bottom: 20px; }
-    .final-cta p { font-size: 1.2rem; color: #ccc; margin-bottom: 30px; }
+    .final-cta p { font-size: 1.2rem; color: #d5dfff; margin-bottom: 30px; }
     
     /* Footer */
-    .footer { padding: 30px 20px; text-align: center; color: #555; font-size: 0.9rem; }
+    .footer { padding: 30px 20px; text-align: center; color: #8c85ff; font-size: 0.9rem; background: #2f1c6a; border-top: 1px solid #673de6; }
+    .footer a { color: #00b090; text-decoration: none; }
     
     @media (max-width: 600px) {
       .hero h1 { font-size: 2rem; }
       .price-tag { font-size: 3rem; }
+      .cta-btn { padding: 18px 30px; font-size: 1.1rem; }
+      .reai-cta-btn { 
+        padding: 14px 28px; 
+        font-size: 14px; 
+        margin: 20px 10px; 
+        width: auto;
+        min-width: 160px;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=crop,q=95/AVLzWZ0NVXsxMRQV/white-logo-az-konnect-YBg8LXLVl2t4qXo4.png" alt="AZ Konnect" class="logo">
+  </header>
 
   <!-- HERO -->
   <section class="hero">
@@ -110,6 +154,11 @@
     <div class="container">
       <h2>Introducing The <span>72-Hour Appointment Rescue System</span></h2>
       <p>A done-for-you lead response machine that captures missed calls, follows up automatically, and books appointments to your calendar — installed and tested in 72 hours or you don't pay a dime.</p>
+      
+      <!-- NEW CTA SECTION -->
+      <div style="text-align:center; margin-top:30px;">
+        <a href="#signup" class="reai-cta-btn">Sign Up Now</a>
+      </div>
     </div>
   </section>
 
@@ -221,7 +270,7 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2024 AZ Konnect. All rights reserved.</p>
+    <p>© 2024 <a href="https://azkonnect.com">AZ Konnect</a>. All rights reserved.</p>
   </footer>
 
 </body>
